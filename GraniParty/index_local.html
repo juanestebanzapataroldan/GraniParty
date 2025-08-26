@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GraniParty 🍹</title>
+
+  <!-- Fuente nueva estilo oscuro -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Bebas Neue', sans-serif;
+      background: linear-gradient(135deg, #0d0d0d, #1a1a1a); /* Fondo oscuro */
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: url("img/logo.png") no-repeat center/contain;
+      background-color: #111;
+      color: #fff;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.9);
+      color: #FFD700; /* Dorado */
+      letter-spacing: 3px;
+    }
+
+    header p {
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    /* Estilo de títulos */
+    h2, h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.8rem;
+      margin-bottom: 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #FFD700; /* Dorado */
+      text-shadow: 0 0 10px rgba(255,215,0,0.7);
+      letter-spacing: 2px;
+    }
+
+    .menu-section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .menu-section {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .menu-section {
+        grid-template-columns: 1fr;
+      }
+    } 
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 20px;
+      border-radius: 15px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      border-radius: 30px;
+      background: #FFD700;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      font-family: 'Bebas Neue', sans-serif;
+    }
+
+    .btn:hover {
+      background: #ff007f;
+      color: #fff;
+    }
+
+    /* Texto de promociones y precios */
+    .promocion-text, .precio-text {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      color: #ffffff;
+      margin: 8px 0;
+    }
+
+    footer {
+      padding: 20px;
+      background: rgba(0,0,0,0.8);
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+    <h1>Bienvenidos a GraniParty 🍧🍹</h1>
+    <p>Granizados con y sin licor - ¡Fiesta en cada vaso!</p>
+    <a href="https://wa.me/573196010025" class="btn">Pedir por WhatsApp</a>
+  </header>
+
+  <!-- Promociones -->
+  <section>
+    <h2>🔥 Promociones</h2>
+    <div class="card">
+      <p class="promocion-text"><b>Martes y Miércoles</b></p>
+      <p class="promocion-text">2x1 en granizados seleccionados</p>
+      <p class="promocion-text">Pequeños 2x $12.000</p>
+      <p class="promocion-text">Medianos 2x $17.000</p>
+      <p class="promocion-text">Grandes 2x $21.000</p>
+      <p class="promocion-text">Extra 2x $26.000</p>
+    </div>
+  </section>
+
+  <!-- Carta -->
+  <section>
+    <h2>🍸 Nuestra Carta</h2>
+    <div class="menu-section">
+      <div class="card">
+        <img src="img/cremosos.jpg" alt="Cremosos">
+        <h3>Cremosos</h3>
+        <p class="precio-text">Pequeños $9.000</p>
+        <p class="precio-text">Medianos $12.000</p>
+        <p class="precio-text">Grandes $15.000</p>
+        <p class="precio-text">Extra $18.000</p>
+      </div>
+      <div class="card">
+        <img src="img/licor.jpg" alt="Con licor">
+        <h3>Tradicionales con Licor</h3>
+        <p class="precio-text">Pequeños $8.500</p>
+        <p class="precio-text">Medianos $11.500</p>
+        <p class="precio-text">Grandes $14.500</p>
+        <p class="precio-text">Extra $17.500</p>
+      </div>
+      <div class="card">
+        <img src="img/sin-licor.jpg" alt="Sin licor">
+        <h3>Sin Licor</h3>
+        <p class="precio-text">Pequeños $7.000</p>
+        <p class="precio-text">Medianos $9.000</p>
+        <p class="precio-text">Grandes $11.000</p>
+        <p class="precio-text">Extra $13.000</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sabores Especiales -->
+  <section>
+    <h2>🌈 Sabores Especiales</h2>
+    <div class="menu-section">
+      <div class="card">
+        <img src="img/fresa.jpg" alt="FRESA BOOM">
+        <p class="precio-text"><b>FRESA BOOM</b><br>Whisky + Fresa</p>
+      </div>
+      <div class="card">
+        <img src="img/moraazul.jpg" alt="MORA AZUL">
+        <p class="precio-text"><b>MORA AZUL</b><br>Vodka Teq + Mora Azul</p>
+      </div>
+      <div class="card">
+        <img src="img/mango.png" alt="MARACUMANGO">
+        <p class="precio-text"><b>MARACUMANGO</b><br>Tequila + Mango</p>
+      </div>
+      <div class="card">
+        <img src="img/smirnoff.png" alt="SMIRNOFF">
+        <p class="precio-text"><b>SMIRNOFF</b><br>Vodka + Limón</p>
+      </div>
+      <div class="card">
+        <img src="img/ojodiablo.jpg" alt="OJO DE DIABLO">
+        <p class="precio-text"><b>OJODEDIABLO</b><br>Champagne + Granadina + Vodka + Teq + Cola</p>
+      </div>
+      <div class="card">
+        <img src="img/jagger.jpg" alt="JAGERBULL">
+        <p class="precio-text"><b>JAGERBULL</b><br>Perla negra + Granadina + Redbull </p>
+      </div>
+      <div class="card">
+        <img src="img/perla.jpg" alt="PERLA NEGRA">
+        <p class="precio-text"><b>PERLA NEGRA</b><br>Perla negra + WHISKY </p>
+      </div>
+ <div class="card">
+        <img src="img/pantera.jpg" alt="PANTERA ROSA">
+        <p class="precio-text"><b>PANTERA ROSA</b><br>VODKA + CHAMPAGNE </p>
+      </div>
+ <div class="card">
+        <img src="img/piña.jpg" alt="PIÑA COLADA">
+        <p class="precio-text"><b>PIÑA COLADA</b><br>RON BLANCO + PIÑA Y COCO </p>
+      </div>
+ <div class="card">
+        <img src="img/sandia.jpg" alt="SANDIA SIN LICOR">
+        <p class="precio-text"><b>SANDIA</b><br>SANDIA </p>
+      </div>
+ <div class="card">
+        <img src="img/crema.jpg" alt="CREMA WHISKY">
+        <p class="precio-text"><b>CREMA WHISKY</b><br>WHISKY + CAFE </p>
+      </div>
+<div class="card">
+        <img src="img/fresasin.jpg" alt="FRESA SIN LICOR">
+        <p class="precio-text"><b>FRESA</b><br>FRESA SIN LICOR</p>
+      </div>
+<div class="card">
+        <img src="img/biche.jpg" alt="MANGO BICHE SIN LICOR">
+        <p class="precio-text"><b>MANGO BICHE</b><br>MANGO BICHE </p>
+      </div>
+<div class="card">
+        <img src="img/redfanta.jpg" alt="RED FANTASY">
+        <p class="precio-text"><b>RED FANTASY</b><br>VODKA + FRUTOS ROJOS </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Redes sociales -->
+  <footer>
+    <p>Síguenos en nuestras redes:</p>
+    <a href="https://www.instagram.com/GraniParty" class="btn">Instagram</a>
+    <a href="https://www.tiktok.com/@graniparty1?_t=ZS-8z9Na9cg4My&_r=1" class="btn">TikTok</a>
+    <a href="mailto:GraniParty@gmail.com" class="btn">Correo</a>
+    <p>© 2025 GraniParty - Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>
+ 
